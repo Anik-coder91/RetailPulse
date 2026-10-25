@@ -64,13 +64,46 @@ The `reports` folder contains:
 
 ## How to Run
 
-1. Install Python and MySQL.
-2. Create and populate the `retailpulse` database.
-3. Install the required Python libraries.
-4. Configure the local database connection in the Python scripts.
-5. Run the SQL analysis script:
+### 1. Prerequisites
 
-   `python sql_analysis.py`
+Install Python and MySQL Server.
+
+### 2. Install Dependencies
+
+Run this command in your project folder:
+
+```bash
+pip install mysql-connector-python pandas matplotlib streamlit python-dotenv
+```
+
+### 3. Configure the Database
+
+Create and populate the MySQL database named `retailpulse` using the project's SQL setup.
+
+### 4. Configure Environment Variables
+
+Create a local `.env` file in the project folder:
+
+```text
+DB_HOST=localhost
+DB_USER=your_mysql_username
+DB_PASSWORD=your_mysql_password
+DB_NAME=retailpulse
+```
+
+Replace the example values with your own MySQL settings. Never upload your `.env` file or publish database passwords.
+
+### 5. Run the SQL Analysis
+
+```bash
+python sql_analysis.py
+```
+
+### 6. Launch the Dashboard
+
+```bash
+streamlit run app.py
+```
 
 6. Launch the dashboard:
 
